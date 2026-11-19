@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply m-0 bg-[#F7F8FF] text-ink font-sans;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input {
+  @apply outline-none;
+}
+
+.auth-input {
+  @apply block h-[46px] w-full min-w-0 rounded-xl border border-[#D9DDF3] bg-white
+  px-4 py-3 text-sm leading-5 text-slate-800 placeholder:text-slate-400
+  focus:border-brand focus:ring-2 focus:ring-brand/10;
+}
+
+.auth-input.has-leading-icon {
+  padding-left: 2.75rem;
+}
+
+.auth-input.has-trailing-control {
+  padding-right: 2.75rem;
+}
+
+.auth-input:-webkit-autofill,
+.auth-input:-webkit-autofill:hover,
+.auth-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #1e293b;
+  caret-color: #1e293b;
+  box-shadow: 0 0 0 1000px #fff inset;
+  transition: background-color 9999s ease-out 0s;
+}
+
+@media (max-width: 767px) {
+  .registration-shell {
+    align-items: flex-start;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .registration-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .brand-panel {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .brand-panel > div:nth-of-type(2) {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-height: 720px) {
+  .registration-shell {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .brand-panel {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .brand-illustration {
+    height: 8rem;
+    margin-top: 1.25rem;
+  }
+
+  .brand-panel > p:last-child {
+    margin-top: 1rem;
+  }
+
+  .register-panel {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.primary-btn {
+  @apply w-full rounded-xl bg-gradient-to-r from-[#3924D9] to-[#5941E8]
+  px-4 py-3 font-semibold text-white transition
+  hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50;
+}
